@@ -7,5 +7,5 @@ import com.bezkoder.spring.security.postgresql.models.Brand;
 
 @Repository
 public interface BrandRepository extends JpaRepository<Brand, String>{
-    void deleteById(String id);
+  
 }

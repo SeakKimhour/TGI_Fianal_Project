@@ -41,7 +41,7 @@ public class Brand implements Serializable{
     @Column(name = "created_date")
     private Date created_date;
     
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "brand")
     private Set<Product>  product= new HashSet<>();
 
     @ManyToOne(optional = false)

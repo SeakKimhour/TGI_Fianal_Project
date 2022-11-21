@@ -36,7 +36,7 @@ public class Sub_Category {
     @Column(name = "created_data")
     private Date created_data;
 
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL ,mappedBy="sub_Category")
+    @OneToMany(cascade = CascadeType.ALL ,mappedBy="sub_Category")
     private Set<Brand>  brand=new HashSet<>();
 
     @ManyToOne()

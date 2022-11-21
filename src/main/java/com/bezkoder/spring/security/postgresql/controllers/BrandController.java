@@ -61,7 +61,7 @@ public class BrandController {
     public ResponseEntity<?> deleteItem(@RequestParam String id) {
         Brand brand= BrandService.getByBrandId(id);
         if(brand!=null){
-            BrandService.deleteBrand(id);
+            BrandService.deleteBrand(brand);
             return new ResponseEntity<>(brand, HttpStatus.OK);
         }else{
             return new ResponseEntity<>("Brand not found", HttpStatus.NOT_FOUND);

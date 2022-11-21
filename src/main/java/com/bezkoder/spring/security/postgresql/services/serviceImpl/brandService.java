@@ -15,6 +15,6 @@ public interface brandService {
 
     Brand updateBrand(String id, brandDto newItemInfo);
 
-    void deleteBrand (String id);
+    void deleteBrand (Brand data);
 
 }

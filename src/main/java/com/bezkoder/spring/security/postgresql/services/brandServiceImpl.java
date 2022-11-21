@@ -58,7 +58,7 @@ public class brandServiceImpl implements brandService {
         return brandRepository.save(oldItemInfo);
     }
 
-    public void deleteBrand(String id) {
-        brandRepository.deleteById(id);
+    public void deleteBrand(Brand data) {
+        brandRepository.delete(data);
     }
 }
