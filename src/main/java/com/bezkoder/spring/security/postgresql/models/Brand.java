@@ -30,6 +30,7 @@ import lombok.Setter;
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "brand_id",
     scope= Brand.class)
+@JsonIgnoreProperties("product")
 public class Brand implements Serializable{
     @Id
     @Column(name = "b_id")
@@ -43,7 +44,6 @@ public class Brand implements Serializable{
     
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "brand")
     private Set<Product>  product= new HashSet<>();
-
     @ManyToOne(optional = false)
     @JoinColumn(name = "sub_cate_id")
     @JsonIgnoreProperties({"brand"})
