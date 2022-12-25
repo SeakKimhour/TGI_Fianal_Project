@@ -78,7 +78,7 @@ public class WebSecurityConfig {
     config.setAllowCredentials(true);
     // *** URL below needs to match the Vue client URL and port ***
     config.setAllowedOrigins(
-        Arrays.asList("http://localhost:8080"));
+        Arrays.asList("http://localhost:4000"));
     config.setAllowedMethods(Collections.singletonList("*"));
     config.setAllowedHeaders(Collections.singletonList("*"));
     source.registerCorsConfiguration("/**", config);
